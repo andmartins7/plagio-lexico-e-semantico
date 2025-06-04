@@ -4,7 +4,7 @@
 Este projeto consiste na criação de um notebook que realiza a detecção de plágio léxico e semântico em textos utilizando diferentes abordagens de NLP (Processamento de Linguagem Natural). O objetivo é identificar tanto cópias literais quanto paráfrases que mantêm o significado do texto original. A abordagem foi implementada em Python, com o uso de modelos de machine learning para análise semântica e de técnicas como TF-IDF para análise léxica.
 
 ## Estrutura do Projeto
-- **plagio_detection_colab.ipynb**: Notebook contendo o código-fonte para a detecção de plágio léxico e semântico.
+- **plagio_detection.ipynb**: Notebook contendo o código-fonte para a detecção de plágio léxico e semântico.
 - **README.md**: Este arquivo contendo instruções de execução, dependências, e o relatório técnico.
 
 ## Configuração do Ambiente
@@ -28,7 +28,7 @@ pip install sentence-transformers
 
 ### 2. Preparação do Ambiente
 1. **Executar o Notebook no Google Colab:**
-   - Faça upload do notebook `plagio_detection_colab.ipynb` no Google Colab.
+   - Faça upload do notebook `plagio_detection.ipynb` no Google Colab.
    - Certifique-se de ter uma conta no [Hugging Face](https://huggingface.co) para gerar um token de autenticação caso queira evitar mensagens de aviso.
    - Siga as etapas e execute as células sequencialmente para gerar os exemplos de plágio léxico e semântico e realizar as avaliações.
 
