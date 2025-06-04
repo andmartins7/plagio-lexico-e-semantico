@@ -88,4 +88,7 @@ Este projeto é de código aberto e colaborativo. Caso deseje contribuir:
 ## Contato
 Para mais informações, dúvidas ou sugestões, entre em contato pelo email: [andreluiscefas@yahoo.com.br](andreluiscefas@yahoo.com.br).
 
+## Licença
+Este projeto está licenciado sob os termos da [Licença MIT](LICENSE).
+
 Agradecemos por utilizar nosso projeto de detecção de plágio. Juntos podemos contribuir para um ambiente acadêmico e profissional mais ético e honesto.
