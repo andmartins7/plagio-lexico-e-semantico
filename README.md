@@ -36,6 +36,10 @@ pip install sentence-transformers
    - Clone o repositório que contém o notebook.
    - Instale as dependências conforme indicado.
    - Abra o notebook utilizando o Jupyter Notebook ou Jupyter Lab e siga as instruções no próprio notebook.
+   - Para executar todo o fluxo em formato de script, use o arquivo `src/plagio_detection.py`:
+     ```sh
+     python src/plagio_detection.py
+     ```
 
 ### 3. Configuração do Token da Hugging Face (Opcional)
 Para evitar avisos sobre o uso de modelos da Hugging Face, crie um token de autenticação:
