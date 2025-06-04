@@ -17,14 +17,11 @@ Para executar o projeto, as seguintes bibliotecas e frameworks são necessários
 - `transformers`: Framework para usar modelos de NLP pré-treinados da Hugging Face.
 - `numpy`: Biblioteca para operações numéricas.
 
-Instale as dependências com os seguintes comandos:
+Instale todas as dependências executando:
 ```sh
-pip install nltk scikit-learn transformers numpy
+pip install -r requirements.txt
 ```
-Além disso, certifique-se de ter o `tokenizers` atualizado e instalar o `sentence-transformers` para utilizar embeddings semânticos:
-```sh
-pip install sentence-transformers
-```
+O arquivo `requirements.txt` reúne as bibliotecas necessárias, incluindo `sentence-transformers` para a geração de embeddings semânticos.
 
 ### 2. Preparação do Ambiente
 1. **Executar o Notebook no Google Colab:**
