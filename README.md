@@ -88,6 +88,15 @@ Este projeto é de código aberto e colaborativo. Caso deseje contribuir:
 - Crie uma branch para sua contribuição (`git checkout -b minha-nova-feature`).
 - Envie um pull request com as suas modificações.
 
+## Executando os Testes
+Para validar as funções do projeto utilize o `pytest`:
+
+```sh
+pytest
+```
+
+Certifique-se de instalar as dependências listadas anteriormente antes de rodar os testes.
+
 ## Contato
 Para mais informações, dúvidas ou sugestões, entre em contato pelo email: [andreluiscefas@yahoo.com.br](andreluiscefas@yahoo.com.br).
 
