@@ -55,8 +55,8 @@ Para evitar avisos sobre o uso de modelos da Hugging Face, crie um token de aute
 - A biblioteca `nltk` foi usada para tokenizar as frases.
 
 ### 2. Geração de Exemplos de Plágio Semântico (Paráfrases)
-- Utilizamos o modelo Pegasus, através do pipeline de `summarization`, para gerar paráfrases das frases do texto original.
-- O parâmetro `max_length` foi ajustado e as frases longas foram truncadas para evitar problemas durante a geração das paráfrases.
+- Utilizamos um modelo Pegasus mais robusto (`google/pegasus-large` por padrão) via pipeline de `text2text-generation`, permitindo alternar para checkpoints fine-tunados definindo a variável de ambiente `PARAPHRASE_MODEL_NAME`.
+- O valor de `max_length` agora é configurável (padrão: 128) e o parâmetro `truncation` foi mantido para evitar que frases muito longas percam contexto sem ultrapassar o limite do modelo. Ajuste via `PARAPHRASE_MAX_LENGTH` conforme necessário.
 
 ### 3. Detecção de Similaridade Léxica
 - Foi utilizada a técnica de TF-IDF (`Term Frequency-Inverse Document Frequency`) para representar os textos como vetores numéricos.
@@ -79,9 +79,9 @@ Para evitar avisos sobre o uso de modelos da Hugging Face, crie um token de aute
 - **Recomendações:** Sugere-se ajustar o treinamento do modelo Pegasus para melhorar a qualidade das paráfrases e minimizar warnings. Além disso, ajustar `max_length` pode evitar perda de conteúdo relevante nas paráfrases.
 
 ### Recomendações Finais
-1. **Melhoria do Modelo de Paráfrase:** A qualidade das paráfrases pode ser melhorada através do treinamento adicional do modelo Pegasus ou a substituição por um modelo pré-treinado mais robusto.
-2. **Aprimoramento de Hiperparâmetros:** Ajustar o valor de `max_length` e `truncation` para garantir que as frases mantenham seu contexto e significado.
-3. **Integração de APIs Externas:** Futuramente, integrar uma API de plágio popular, como o Turnitin, poderia melhorar a precisão e permitir comparações com uma base de dados maior.
+1. **Melhoria do Modelo de Paráfrase:** A qualidade das paráfrases pode ser melhorada através do treinamento adicional do modelo Pegasus ou da substituição por um modelo pré-treinado mais robusto, agora suportada via configuração do pipeline e variáveis de ambiente.
+2. **Aprimoramento de Hiperparâmetros:** Ajustar o valor de `max_length` e `truncation` para garantir que as frases mantenham seu contexto e significado; os novos parâmetros padrão já refletem essa recomendação.
+3. **Integração de APIs Externas:** Uma interface para acoplar APIs de plágio (ex.: Turnitin) está disponível para extensão futura, possibilitando comparações com bases maiores quando a integração for implementada.
 
 ## Como Contribuir
 Este projeto é de código aberto e colaborativo. Caso deseje contribuir:
